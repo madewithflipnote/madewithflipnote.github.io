@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مستكشف عُمان</title>
+<style>
+:root{--green:#176b52;--deep:#104638;--gold:#d7a84b;--cream:#fbf7ed;--ink:#23342e;--muted:#64736c;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.8}
+header{background:linear-gradient(120deg,var(--deep),var(--green));color:white;padding:18px 7%;position:sticky;top:0;z-index:10;box-shadow:0 3px 14px #0002}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.brand{font-size:1.35rem;font-weight:bold}.brand span{color:#f0cc7a}nav{display:flex;gap:8px;flex-wrap:wrap}nav button{border:0;background:transparent;color:white;padding:8px 13px;border-radius:20px;cursor:pointer;font:inherit}nav button:hover,nav button.active{background:#ffffff24}
+.hero{padding:70px 7% 65px;background:linear-gradient(100deg,#0d493bdf,#0d493b88),linear-gradient(135deg,#a6b9a0,#e8d7ac);color:white;min-height:340px;display:flex;align-items:center}.hero-inner{max-width:760px}.eyebrow{color:#f3d28c;font-weight:bold}.hero h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.25;margin:8px 0}.hero p{font-size:1.1rem;max-width:650px}.primary{display:inline-block;background:var(--gold);color:#302713;text-decoration:none;border:0;border-radius:9px;padding:11px 20px;font-weight:bold;cursor:pointer;font:inherit}
+main{max-width:1120px;margin:auto;padding:42px 22px}.section{display:none}.section.active{display:block;animation:fade .25s ease}@keyframes fade{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:none}}.section-title{margin:0 0 8px;color:var(--deep);font-size:2rem}.intro{color:var(--muted);margin-top:0;margin-bottom:25px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.card{background:white;border:1px solid #e9e2d2;border-radius:15px;overflow:hidden;box-shadow:0 5px 16px #173d2c0b}.card-top{height:9px;background:linear-gradient(90deg,var(--green),var(--gold))}.card-body{padding:18px}.card h3{color:var(--deep);margin:0 0 7px}.card p{margin:0;color:var(--muted)}.tag{display:inline-block;margin-top:12px;color:var(--green);background:#eaf3ed;border-radius:20px;padding:3px 10px;font-size:.85rem}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 22px}.toolbar input,.toolbar select{padding:11px 13px;border:1px solid #d7d9ce;border-radius:9px;background:white;font:inherit;min-width:190px}.notice{background:#edf4ee;border-right:4px solid var(--gold);padding:16px 18px;border-radius:9px;margin-top:24px}.footer{text-align:center;padding:24px;background:var(--deep);color:#e8eee9;margin-top:30px;font-size:.9rem}
+@media(max-width:600px){header{padding:14px 5%}.nav{align-items:flex-start}.hero{padding:52px 6%}.toolbar input,.toolbar select{width:100%}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="brand">🇴🇲 <span>مستكشف</span> عُمان</div><nav aria-label="القائمة الرئيسية">
+<button class="active" data-page="home">الرئيسية</button><button data-page="heritage">التراث</button><button data-page="places">المعالم السياحية</button><button data-page="nature">الطبيعة</button>
+</nav></div></header>
+<section class="hero" id="hero"><div class="hero-inner"><div class="eyebrow">أهلاً بكم في سلطنة عُمان</div><h1>اكتشف جمال عُمان<br>وتعرّف على هويتها</h1><p>رحلة رقمية للتعرّف على تاريخ عُمان وتراثها ومعالمها الطبيعية والسياحية، من خلال موقع تفاعلي باللغة العربية.</p><button class="primary" data-go="heritage">ابدأ الاستكشاف ←</button></div></section>
+<main>
+<section class="section active" id="home"><h2 class="section-title">مرحباً بك في مستكشف عُمان</h2><p class="intro">اختر أحد الأقسام للتعرّف على جوانب مختلفة من سلطنة عُمان.</p><div class="grid">
+<article class="card"><div class="card-top"></div><div class="card-body"><h3>🏺 التراث العُماني</h3><p>اكتشف العادات والحرف والأزياء والأطعمة التقليدية.</p><span class="tag">ثقافة وهوية</span></div></article>
+<article class="card"><div class="card-top"></div><div class="card-body"><h3>🏰 المعالم السياحية</h3><p>تعرّف على القلاع والحصون والأماكن التاريخية.</p><span class="tag">تاريخ وسياحة</span></div></article>
+<article class="card"><div class="card-top"></div><div class="card-body"><h3>🏞️ الطبيعة العُمانية</h3><p>استكشف الجبال والأودية والصحارى والشواطئ.</p><span class="tag">تنوع طبيعي</span></div></article>
+</div><div class="notice">💡 <strong>هل تعلم؟</strong> تتميز سلطنة عُمان بتنوع بيئاتها الطبيعية، من الجبال الشاهقة إلى السواحل الطويلة والصحارى.</div></section>
+<section class="section" id="heritage"><h2 class="section-title">التراث العُماني</h2><p class="intro">التراث جزء مهم من الهوية العُمانية، وينتقل من جيل إلى جيل.</p><div class="toolbar"><input id="heritageSearch" type="search" placeholder="ابحث في عناصر التراث..." aria-label="ابحث في عناصر التراث"></div><div class="grid" id="heritageGrid">
+<article class="card" data-search="الخنجر الفضة اللباس التقليدي"><div class="card-top"></div><div class="card-body"><h3>الخنجر العُماني</h3><p>رمز تراثي يظهر في الزي الرسمي العُماني، وتختلف أشكاله وزخارفه حسب مناطق عُمان.</p></div></article>
+<article class="card" data-search="الحلوى العمانية الطعام الضيافة"><div class="card-top"></div><div class="card-body"><h3>الحلوى العُمانية</h3><p>من أشهر الحلويات التقليدية، وتُقدّم غالباً مع القهوة في المناسبات والضيافة.</p></div></article>
+<article class="card" data-search="القهوة العمانية الكرم الضيافة"><div class="card-top"></div><div class="card-body"><h3>القهوة العُمانية</h3><p>ترتبط بالكرم وحسن الضيافة، وغالباً ما تُقدّم مع التمر.</p></div></article>
+<article class="card" data-search="السعفيات الحرف اليدوية النخيل"><div class="card-top"></div><div class="card-body"><h3>صناعة السعفيات</h3><p>حرفة يدوية تستخدم سعف النخيل لصناعة منتجات تقليدية نافعة.</p></div></article>
+</div><p id="noHeritage" hidden>لا توجد نتائج مطابقة. جرّب كلمة أخرى.</p></section>
+<section class="section" id="places"><h2 class="section-title">معالم سياحية وتاريخية</h2><p class="intro">تضم عُمان معالم تحكي قصصاً عن تاريخها وحضارتها.</p><div class="grid">
+<article class="card"><div class="card-top"></div><div class="card-body"><h3>قلعة نزوى</h3><p>من أبرز المعالم التاريخية في ولاية نزوى بمحافظة الداخلية، وتشتهر ببرجها الدائري الكبير.</p><span class="tag">محافظة الداخلية</span></div></article>
+<article class="card"><div class="card-top"></div><div class="card-body"><h3>جامع السلطان قابوس الأكبر</h3><p>من أبرز المعالم المعمارية في مسقط، ويتميز بتصميمه الإسلامي الجميل.</p><span class="tag">محافظة مسقط</span></div></article>
+<article class="card"><div class="card-top"></div><div class="card-body"><h3>سوق مطرح</h3><p>سوق تقليدي معروف بأزقته ومحلاته التي تعرض المنتجات والحرف الشعبية.</p><span class="tag">محافظة مسقط</span></div></article>
+</div></section>
+<section class="section" id="nature"><h2 class="section-title">الطبيعة في عُمان</h2><p class="intro">تتميّز السلطنة بتنوع طبيعي يجعلها غنية بالمناظر والبيئات المختلفة.</p><div class="grid">
+<article class="card"><div class="card-top"></div><div class="card-body"><h3>الجبل الأخضر</h3><p>منطقة جبلية معروفة بأجوائها المعتدلة ومدرجاتها الزراعية.</p></div></article>
+<article class="card"><div class="card-top"></div><div class="card-body"><h3>وادي شاب</h3><p>وادٍ مشهور بمياهه ومناظره الطبيعية بين الجبال.</p></div></article>
+<article class="card"><div class="card-top"></div><div class="card-body"><h3>رمال الشرقية</h3><p>منطقة صحراوية واسعة تتميز بالكثبان الرملية والمناظر الصحراوية.</p></div></article>
+</div></section>
+</main>
+<footer class="footer">مستكشف عُمان 🇴🇲 | مشروع تعليمي للتعريف بتراث سلطنة عُمان وطبيعتها</footer>
+<script>
+const pages=[...document.querySelectorAll('.section')];
+function showPage(id){pages.forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));document.getElementById('hero').style.display=id==='home'?'flex':'none';window.scrollTo({top:0,behavior:'smooth'});}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.go)));
+document.getElementById('heritageSearch').addEventListener('input',e=>{const q=e.target.value.trim();let count=0;document.querySelectorAll('#heritageGrid .card').forEach(card=>{const match=(card.innerText+' '+card.dataset.search).includes(q);card.hidden=!match;if(match)count++;});document.getElementById('noHeritage').hidden=count!==0;});
+</script>
+</body>
+</html>
